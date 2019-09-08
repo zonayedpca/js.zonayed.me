@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "js.zonayed.me",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "হাতেকলমে জাভাস্ক্রিপ্ট-সম্পূর্ণ বাংলায় জাভাস্ক্রিপ্ট শিখুন",
+  "version": "2.0.0",
+  "author": "Zonayed Ahmed<contact@zonayed.me>",
   "dependencies": {
     "gatsby": "^2.15.9",
     "gatsby-image": "^2.2.17",
@@ -22,7 +22,10 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "javascript",
+    "bengali-javascript",
+    "bangla-javascript",
+    "learn-javascript"
   ],
   "license": "MIT",
   "scripts": {
@@ -35,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/zonayedpca/js.zonayed.me"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/zonayedpca/js.zonayed.me/issues"
   }
 }
