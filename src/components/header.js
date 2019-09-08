@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const Header = ({ siteTitle }) => (
   <div
@@ -8,13 +8,16 @@ const Header = ({ siteTitle }) => (
       background: `#f0db4f`,
       height: `100vh`,
       minHeight: `630px`,
+      padding: `0 100px`,
       display: `flex`,
       flexWrap: `wrap`,
+      flexDirection: `column`,
     }}
   >
     <header
       style={{
-        margin: `0 auto`,
+        flex: 1,
+        padding: `25px 0`,
       }}
     >
       <div style={{}}>
@@ -31,8 +34,14 @@ const Header = ({ siteTitle }) => (
         </h1>
       </div>
     </header>
-    <div className="intro-area">
-      <div className="intro-main">
+    <div
+      style={{
+        flex: 2,
+        display: `flex`,
+      }}
+      className="intro-area"
+    >
+      <div style={{ flex: 2, alignSelf: `center` }} className="intro-main">
         <div className="intro-text">
           <h2>Learn JavaScript Bengali</h2>
           <p>Learn everything you want</p>
@@ -44,9 +53,12 @@ const Header = ({ siteTitle }) => (
           </p>
         </div>
       </div>
-      <div className="intro-book">
+      <div style={{ flex: 1, alignSelf: `center` }} className="intro-book">
         <p>Book Coming soon...</p>
       </div>
+    </div>
+    <div style={{ flex: 1 }} className="bookmarks-area">
+      BookMark
     </div>
   </div>
 )
