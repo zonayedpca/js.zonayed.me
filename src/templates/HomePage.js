@@ -5,18 +5,54 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-const HomePage = ({ pageContext }) => {
-  console.log(pageContext)
+const HomePage = ({ pageContext: { data } }) => {
+  const topics = Object.keys(data)
+  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+      <div
+        style={{
+          padding: `100px 0`,
+        }}
+        className="contents-area"
+      >
+        {topics.map(topic => (
+          <div key={topic} style={{ marginBottom: `50px` }} className="topic">
+            <h3>{topic}</h3>
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                margin: 0,
+                listStyle: `none`,
+              }}
+            >
+              {data[topic].map(({ id, title: { rendered } }, index) => (
+                <li
+                  key={id}
+                  style={{
+                    flexBasis: `calc(100%/3 - 30px)`,
+                    margin: `15px`,
+                    marginLeft: index % 3 === 0 ? 0 : `15px`,
+                    border: `solid 3px #323330`,
+                    padding: `25px`,
+                    color: `#323330`,
+                    backgroundColor: `#f0db4f`,
+                    borderRadius: 4,
+                    display: `flex`,
+                    alignItems: `center`,
+                  }}
+                >
+                  <h4>
+                    <a dangerouslySetInnerHTML={{ __html: rendered }} />
+                  </h4>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }
