@@ -5,6 +5,8 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
+import { sliceCat } from '../utils'
+
 const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
   console.log(data)
@@ -47,9 +49,9 @@ const HomePage = ({ pageContext: { data } }) => {
                     <h4
                       style={{
                         padding: `25px`,
-                        fontSize: `16px`,
+                        fontSize: `22px`,
                       }}
-                      dangerouslySetInnerHTML={{ __html: rendered }}
+                      dangerouslySetInnerHTML={{ __html: sliceCat(rendered) }}
                     />
                   </a>
                 </li>
