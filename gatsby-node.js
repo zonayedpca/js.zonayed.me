@@ -43,18 +43,48 @@ exports.createPages = ({ actions }) => {
         algods,
         soft,
       }
-      return resolve(data)
+      const dataTitle = {
+        basic: basic.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        advance: advance.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        es6: es6.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        dom: dom.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        daily: daily.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        algods: algods.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+        soft: soft.map(item => ({
+          id: item.id,
+          title: item.title,
+        })),
+      }
+      return resolve({ dataTitle, data })
     } catch (err) {
       return reject(err)
     }
-  }).then(data => {
-    if (data.errors) {
+  }).then(res => {
+    if (res.errors) {
       return reject('An Error Occured')
     }
     createPage({
       path: `/`,
       context: {
-        data,
+        data: res.dataTitle,
       },
       component: homePageTemplate,
     })

@@ -36,7 +36,6 @@ const HomePage = ({ pageContext: { data } }) => {
                     margin: `15px`,
                     marginLeft: index % 3 === 0 ? 0 : `15px`,
                     border: `solid 3px #323330`,
-                    padding: `25px`,
                     color: `#323330`,
                     backgroundColor: `#f0db4f`,
                     borderRadius: 4,
@@ -44,9 +43,15 @@ const HomePage = ({ pageContext: { data } }) => {
                     alignItems: `center`,
                   }}
                 >
-                  <h4>
-                    <a dangerouslySetInnerHTML={{ __html: rendered }} />
-                  </h4>
+                  <a style={{ display: `block`, width: `100%` }}>
+                    <h4
+                      style={{
+                        padding: `25px`,
+                        fontSize: `16px`,
+                      }}
+                      dangerouslySetInnerHTML={{ __html: rendered }}
+                    />
+                  </a>
                 </li>
               ))}
             </ul>
