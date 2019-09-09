@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-import { sliceCat } from '../utils'
+import { sliceCat, topicTranslation } from '../utils'
 
 const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
@@ -21,7 +21,7 @@ const HomePage = ({ pageContext: { data } }) => {
       >
         {topics.map(topic => (
           <div key={topic} style={{ marginBottom: `50px` }} className="topic">
-            <h3>{topic}</h3>
+            <h3>{topicTranslation(topic)}</h3>
             <ul
               style={{
                 display: `flex`,
@@ -38,14 +38,21 @@ const HomePage = ({ pageContext: { data } }) => {
                     margin: `15px`,
                     marginLeft: index % 3 === 0 ? 0 : `15px`,
                     border: `solid 3px #323330`,
-                    color: `#323330`,
                     backgroundColor: `#f0db4f`,
                     borderRadius: 4,
                     display: `flex`,
                     alignItems: `center`,
                   }}
                 >
-                  <a style={{ display: `block`, width: `100%` }}>
+                  <Link
+                    to={`/${topic}/${id}`}
+                    style={{
+                      display: `block`,
+                      color: `#323330`,
+                      textDecoration: `none`,
+                      width: `100%`,
+                    }}
+                  >
                     <h4
                       style={{
                         padding: `25px`,
@@ -53,7 +60,7 @@ const HomePage = ({ pageContext: { data } }) => {
                       }}
                       dangerouslySetInnerHTML={{ __html: sliceCat(rendered) }}
                     />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

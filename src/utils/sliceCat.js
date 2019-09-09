@@ -13,7 +13,6 @@ const sliceCat = text => {
   if (hasThisTitle) {
     result = String(result).split(/[\:|\ঃ]/)[1]
   }
-  // console.log(text.split('ঃ'))
   return result
 }
 
