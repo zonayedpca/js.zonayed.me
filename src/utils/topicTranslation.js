@@ -9,5 +9,6 @@ const translation = {
 }
 
 export const topicTranslation = topic => {
-  return translation[topic]
+  const result = topic.replace('/', '')
+  return translation[result]
 }
