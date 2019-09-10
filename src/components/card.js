@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, Router } from 'gatsby'
 
 import { sliceCat } from '../utils'
+
+console.dir(Router)
 
 const Card = ({ id, title, index, topic }) => {
   return (

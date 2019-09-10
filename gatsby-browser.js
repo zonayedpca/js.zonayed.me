@@ -5,3 +5,17 @@
  */
 
 // You can delete this file if you're not using it
+
+const NProgress = require('nprogress')
+
+exports.onPreRouteUpdate = ({ location, prevLocation }) => {
+  NProgress.start()
+}
+
+exports.onRouteUpdateDelayed = () => {
+  NProgress.start()
+}
+
+exports.onRouteUpdate = ({ location, prevLocation }) => {
+  NProgress.done()
+}
