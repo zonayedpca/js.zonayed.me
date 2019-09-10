@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import { topicTranslation } from '../utils'
 import Card from './card'
@@ -10,7 +11,9 @@ const Category = ({ topic, data }) => {
       style={{ marginBottom: `50px`, padding: `0 100px` }}
       className="topic"
     >
-      <h3>{topicTranslation(topic)}</h3>
+      <h3>
+        <Link to={`/${topic}`}>{topicTranslation(topic)}</Link>
+      </h3>
       <ul
         style={{
           display: `flex`,

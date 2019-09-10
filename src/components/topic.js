@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'gatsby'
+
 import { sliceCat, topicTranslation } from '../utils'
 
 const Topic = ({ category, topics, curCategory, curPost }) => {
@@ -12,7 +14,8 @@ const Topic = ({ category, topics, curCategory, curPost }) => {
         <ul>
           {topics.map(({ id, title }) => (
             <li key={id}>
-              <a
+              <Link
+                to={`/${category}/${id}`}
                 style={{
                   fontWeight: id === Number(curPost) ? `bolder` : `normal`,
                 }}

@@ -18,7 +18,7 @@ const Card = ({ id, title, index, topic }) => {
       }}
     >
       <Link
-        to={`/${topic}/${id}`}
+        to={`${topic}/${id}`}
         style={{
           display: `block`,
           color: `#323330`,

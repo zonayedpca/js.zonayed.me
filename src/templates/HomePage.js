@@ -9,7 +9,7 @@ const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
   return (
     <Layout home>
-      <SEO title="Home" />
+      <SEO title="হোমপেজ" />
       <div
         style={{
           padding: `100px 0`,
