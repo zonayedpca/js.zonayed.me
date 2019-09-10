@@ -14,7 +14,7 @@ import './layout.css'
 import Footer from './footer'
 import Main from './main'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, home }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Intro siteTitle={data.site.siteMetadata.title} />
+      <Intro home={home} siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,

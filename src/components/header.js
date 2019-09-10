@@ -3,14 +3,20 @@ import { Link } from 'gatsby'
 
 import inverseLogo from '../assets/images/inverse-logo.svg'
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, home }) => {
   return (
     <header
       style={{
         flex: 1,
       }}
     >
-      <div style={{ display: `flex`, alignItems: `center`, padding: `50px 0` }}>
+      <div
+        style={{
+          display: `flex`,
+          alignItems: `center`,
+          padding: home ? `50px 0` : `25px 0`,
+        }}
+      >
         <div style={{ flex: 1, margin: 0 }}>
           <Link
             to="/"

@@ -8,7 +8,7 @@ import Category from '../components/category'
 const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
   return (
-    <Layout>
+    <Layout home>
       <SEO title="Home" />
       <div
         style={{
