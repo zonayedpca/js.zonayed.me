@@ -233,7 +233,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;
@@ -243,7 +243,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: 'Kalpurush', Arial, sans-serif;
   font-weight: bold;
@@ -259,7 +259,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: 'Kalpurush', Arial, sans-serif;
   font-weight: bold;
@@ -342,14 +342,14 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -393,7 +393,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 figure {
   margin-left: 0;
@@ -518,7 +518,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0;
 }
 ol li {
   padding-left: 0;

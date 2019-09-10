@@ -11,6 +11,8 @@ const axios = require('axios')
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const homePageTemplate = path.resolve('src/templates/HomePage.js')
+  const topicPageTemplate = path.resolve('src/templates/TopicPage.js')
+  const postPageTemplate = path.resolve('src/templates/PostPage.js')
   return new Promise(async (resolve, reject) => {
     try {
       const { data: basic } = await axios(
@@ -87,6 +89,25 @@ exports.createPages = ({ actions }) => {
         data: res.dataTitle,
       },
       component: homePageTemplate,
+    })
+    Object.keys(res.dataTitle).map(topic => {
+      createPage({
+        path: `/${topic}`,
+        context: {
+          data: res.dataTitle[topic],
+        },
+        component: topicPageTemplate,
+      })
+      res.data[topic].map(item => {
+        createPage({
+          path: `/${topic}/${item.id}`,
+          context: {
+            data: item,
+            allData: res.dataTitle,
+          },
+          component: postPageTemplate,
+        })
+      })
     })
   })
 }

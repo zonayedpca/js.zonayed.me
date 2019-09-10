@@ -56,7 +56,7 @@ const HomePage = ({ pageContext: { data } }) => {
                     <h4
                       style={{
                         padding: `25px`,
-                        fontSize: `22px`,
+                        fontSize: `20px`,
                       }}
                       dangerouslySetInnerHTML={{ __html: sliceCat(rendered) }}
                     />
