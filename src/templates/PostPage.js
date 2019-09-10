@@ -1,36 +1,22 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Post from '../components/post'
+import Catalog from '../components/catalog'
 
-const PostPage = ({ pageContext }) => {
-  console.log(pageContext)
+const PostPage = ({ path, pageContext: { data, allData } }) => {
+  const title = data.title.rendered
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={title} />
       <div
         style={{
           display: `flex`,
         }}
         className="post-area"
       >
-        <div
-          style={{ flex: 3, padding: `100px 0`, paddingLeft: `100px` }}
-          className="post"
-        >
-          Post Here
-        </div>
-        <div
-          style={{
-            backgroundColor: `#e9ebee`,
-            flex: 1,
-            padding: `100px 0`,
-            paddingRight: `100px`,
-            borderLeft: `solid 3px #323330`,
-          }}
-          className="index"
-        >
-          Index
-        </div>
+        <Post title={title} content={data.content.rendered} />
+        <Catalog path={path} topics={allData} />
       </div>
     </Layout>
   )
