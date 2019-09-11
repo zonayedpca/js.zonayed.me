@@ -1,27 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { topicTranslation } from '../utils'
+import { topicTranslation, topicColor } from '../utils'
 import Card from './card'
+
+import './category.css'
 
 const Category = ({ topic, data }) => {
   return (
-    <div
-      key={topic}
-      style={{ marginBottom: `50px`, padding: `0 100px` }}
-      className="topic"
-    >
-      <h3>
-        <Link to={`/${topic}`}>{topicTranslation(topic)}</Link>
-      </h3>
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          margin: 0,
-          listStyle: `none`,
-        }}
-      >
+    <div key={topic} className="topic">
+      <div className="title">
+        <span
+          style={{
+            backgroundColor: topicColor(topic),
+          }}
+        />
+        <h3>
+          <Link to={`/${topic}`}>{topicTranslation(topic)}</Link>
+        </h3>
+      </div>
+      <ul>
         {data.map(({ id, title: { rendered } }, index) => (
           <Card key={id} id={id} title={rendered} index={index} topic={topic} />
         ))}

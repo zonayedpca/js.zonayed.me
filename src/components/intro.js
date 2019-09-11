@@ -57,7 +57,7 @@ const Intro = ({ siteTitle, home }) => (
             </div>
           </div>
           <div style={{ flex: 1, alignSelf: `center` }} className="intro-book">
-            <p>...</p>
+            <p />
           </div>
         </div>
         <div style={{ flex: 1 }} className="bookmarks-area">

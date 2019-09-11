@@ -1,67 +1,71 @@
-h1 {
+.post h1 {
 }
 
-h2 {
+.post h2 {
   font-size: 36px;
 }
 
-h3 {
+.post h3 {
   font-size: 32px;
   margin-bottom: 15px;
 }
 
-h4 {
+.post h4 {
   font-size: 28px;
   margin-bottom: 15px;
 }
 
-h5 {
+.post h5 {
   font-size: 26px;
   margin-bottom: 15px;
 }
 
-h6 {
+.post h6 {
   font-size: 24px;
   margin-bottom: 15px;
 }
 
-a {
+.post a {
   color: #323330;
   text-decoration: underline;
 }
 
-p,
-.section-divider {
+.post p,
+.post .section-divider {
   font-size: 22px;
   color: #323330;
   margin-bottom: 15px;
   line-height: 1.8;
 }
 
-ul {
+.post ul {
 }
 
-li {
+.post ul li {
   margin-top: 15px;
   font-size: 22px;
   margin-left: 25px;
 }
 
-code {
+.post code {
   font-size: 18px;
 }
 
-pre {
+.post pre {
   margin: 50px 0;
   font-size: 18px;
   flex: 1;
 }
 
-figure {
+.post figure {
   margin: 0;
   text-align: center;
   padding: 50px 0;
 }
 
-img {
+.post img {
+}
+
+.post .shortcode_wysija {
+  display: none;
 }
