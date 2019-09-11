@@ -275,7 +275,7 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: 'Kalpurush', Arial, sans-serif;
   font-weight: bold;
@@ -307,7 +307,7 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: 'Kalpurush', Arial, sans-serif;
   font-weight: bold;
@@ -323,7 +323,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
   font-family: 'Kalpurush', Arial, sans-serif;
   font-weight: bold;
@@ -339,7 +339,7 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 ul {
   margin-left: 0;
@@ -350,6 +350,7 @@ ul {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
+  font-size: 18px;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -394,6 +395,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 0;
+  font-size: 18px;
 }
 figure {
   margin-left: 0;

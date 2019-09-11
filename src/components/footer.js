@@ -13,7 +13,8 @@ const Footer = () => {
       }}
     >
       <div style={{ flex: 1 }} className="foot">
-        <h3>সম্পর্কেঃ</h3>
+        <div>Image</div>
+        <h3 style={{ marginBottom: `15px` }}>সম্পর্কেঃ</h3>
         <p>
           প্রোজেক্টটি সম্পূর্ণ সোর্স কোডসহ গিটহাবে রয়েছে। আপনার ভালো লেগে থাকলে
           স্টার দিয়ে আসবেন। আপনার পরামর্শ, মন্তব্য এবং ভুলত্রুটি গিটহাবে ইস্যু
@@ -21,18 +22,26 @@ const Footer = () => {
         </p>
       </div>
       <div style={{ flex: 1, display: `flex` }} className="foot">
-        <div>
-          <h4>আপনার জন্যঃ</h4>
-          <ul>
+        <div
+          style={{
+            flex: 1,
+          }}
+        >
+          <h3 style={{ marginBottom: `15px` }}>আপনার জন্যঃ</h3>
+          <ul style={{ listStyle: `none` }}>
             <li>রিঅ্যাক্ট জেএস শিখুন</li>
             <li>আমি মিডিয়ামে</li>
             <li>আমার ব্লগ</li>
             <li>অন্যকিছু শিখুন</li>
           </ul>
         </div>
-        <div>
-          <h4>রিসোর্সঃ</h4>
-          <ul>
+        <div
+          style={{
+            flex: 1,
+          }}
+        >
+          <h3 style={{ marginBottom: `15px` }}>রিসোর্সঃ</h3>
+          <ul style={{ listStyle: `none` }}>
             <li>এমডিএন ডকুমেন্টেশন</li>
             <li>ইউডেমি কোর্স</li>
             <li>বই</li>
@@ -41,7 +50,6 @@ const Footer = () => {
         </div>
       </div>
       <div style={{ flex: 1 }} className="foot">
-        <div>Image</div>
         <p>
           <span>❤</span> এর সাথে ডেভেলপ করেছে <a href="#">জুনায়েদ আহমেদ</a>
         </p>
