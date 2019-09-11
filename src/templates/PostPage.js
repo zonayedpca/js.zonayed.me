@@ -12,6 +12,7 @@ const PostPage = ({ path, pageContext: { data, allData } }) => {
       <div
         style={{
           display: `flex`,
+          flexWrap: `wrap`,
         }}
         className="post-area"
       >

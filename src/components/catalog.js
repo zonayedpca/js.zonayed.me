@@ -9,7 +9,7 @@ const Catalog = ({ path, topics }) => {
     <div
       style={{
         backgroundColor: `#e9ebee`,
-        flex: 1,
+        width: `400px`,
         padding: `100px 0`,
         paddingRight: `100px`,
         paddingLeft: `50px`,
