@@ -1,3 +1,15 @@
+.post {
+  width: calc(100% - 400px);
+  padding: 100px 0;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+.post h2.title {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
 .post h1 {
 }
 
