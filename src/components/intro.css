@@ -1,0 +1,66 @@
+.intro {
+  background: #f0db4f;
+  height: auto;
+  min-height: auto;
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-top: solid 3px #323330;
+  border-bottom: solid 3px #323330;
+}
+
+.intro.home {
+  height: 100vh;
+  min-height: 630px;
+}
+
+.intro .intro-area {
+  flex: 2;
+  display: flex;
+}
+
+.intro .intro-area .intro-main {
+  flex: 2;
+  align-self: center;
+}
+
+.intro .intro-area .intro-main .intro-text {
+  margin-bottom: 10px;
+}
+
+.intro .intro-area .intro-main .intro-text h2 {
+  font-size: 52px;
+  color: #323330;
+}
+
+.intro .intro-area .intro-main .intro-text p {
+  font-size: 26px;
+  color: #323330;
+}
+
+.intro .intro-area .intro-main .search input {
+  display: block;
+  width: 60%;
+  border: 3px solid #323330;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.intro .intro-area .intro-main .search p {
+  margin-top: 5px;
+}
+
+.intro .intro-area .intro-main .search p span {
+  font-size: 18px;
+}
+
+.intro .intro-area .intro-book {
+  flex: 1;
+  align-self: center;
+}
+
+.intro .bookmarks-area {
+  flex: 1;
+}
