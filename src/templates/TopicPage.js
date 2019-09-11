@@ -4,17 +4,14 @@ import SEO from '../components/seo'
 import Category from '../components/category'
 import { topicTranslation } from '../utils'
 
+import './topicpage.css'
+
 const TopicPage = ({ path, pageContext: { data } }) => {
   const topic = path
   return (
     <Layout>
       <SEO title={topicTranslation(path)} />
-      <div
-        style={{
-          padding: `100px 0`,
-        }}
-        className="category-area"
-      >
+      <div className="category-area">
         <Category topic={topic} data={data} />
       </div>
     </Layout>
