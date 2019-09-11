@@ -1,0 +1,29 @@
+.card {
+  flex-basis: calc(100% / 3 - 20px);
+  margin: 15px;
+  border: solid 3px #323330;
+  background-color: #f0db4f;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.card:nth-child(3n - 2) {
+  margin-left: 0;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card a {
+  display: block;
+  color: #323330;
+  text-decoration: none;
+  width: 100%;
+}
+
+.card a h4 {
+  padding: 25px;
+  font-size: 20px;
+}
