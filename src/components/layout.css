@@ -631,3 +631,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.app .contents {
+  margin: 0 auto;
+  padding-top: 0;
+}
