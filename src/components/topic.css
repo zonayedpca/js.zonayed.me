@@ -1,0 +1,42 @@
+.topic-list {
+  margin-bottom: 25px;
+}
+
+.topic-list h4 {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.topic-list h4 img {
+  height: 15px;
+}
+
+.topic-list ul {
+  margin-top: 25px;
+}
+
+.topic-list ul li {
+  position: relative;
+  font-size: 18px;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.topic-list ul li span {
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background: #f0db4f;
+  left: -20px;
+}
+
+.topic-list ul li a {
+  font-weight: normal;
+  color: #333;
+  text-decoration: none;
+}
+
+.topic-list ul li a.current-post {
+  font-weight: bolder;
+}
