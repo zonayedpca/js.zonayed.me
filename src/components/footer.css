@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: #323330;
+  color: #fff;
+}
+
+.footer .foot {
+  flex: 1;
+}
+
+.footer .foot h3 {
+  margin-bottom: 15px;
+}
+
+.footer .foot.foot-child {
+  display: flex;
+}
+
+.footer .foot.foot-child .child {
+  flex: 1;
+}
+
+.footer .foot.foot-child .child h3 {
+  margin-bottom: 15px;
+}
+
+.footer .foot.foot-child .child ul {
+  list-style: none;
+}
