@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -14,7 +13,7 @@ const HomePage = ({ pageContext: { data } }) => {
       <SEO title="হোমপেজ" />
       <div className="contents-area">
         {topics.map(topic => (
-          <Category topic={topic} data={data[topic]} />
+          <Category key={topic} topic={topic} data={data[topic]} />
         ))}
       </div>
     </Layout>

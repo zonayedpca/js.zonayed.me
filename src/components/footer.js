@@ -119,7 +119,14 @@ const Footer = () => {
           <img src={logo} alt="হাতেকলমে জাভাস্ক্রিপ্ট" />
         </div>
         <p>
-          <span>❤</span> এর সাথে ডেভেলপ করেছে <a href="#">জুনায়েদ আহমেদ</a>
+          <span>❤</span> এর সাথে ডেভেলপ করেছে{' '}
+          <a
+            target="__blank"
+            rel="noopener noreferrer"
+            href="https://github.com/zonayedpca/js.zonayed.me"
+          >
+            জুনায়েদ আহমেদ
+          </a>
         </p>
       </div>
     </footer>

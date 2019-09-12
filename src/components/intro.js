@@ -1,8 +1,6 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import inverseLogo from '../assets/images/inverse-logo.svg'
 import Header from './header'
 
 import './intro.css'

@@ -19,11 +19,10 @@ const Post = ({ allData, path, title, content }) => {
         <ul>
           {prevPost && (
             <li className="prev">
-              <img />
               <p>আগের পোস্টঃ </p>
               <p>
                 <Link
-                  to={`${prevPost.category}/${prevPost.id}`}
+                  to={`/${prevPost.category}/${prevPost.id}`}
                   dangerouslySetInnerHTML={{
                     __html: sliceCat(prevPost.title.rendered),
                   }}
@@ -33,11 +32,10 @@ const Post = ({ allData, path, title, content }) => {
           )}
           {nextPost && (
             <li className="next">
-              <img />
               <p>পরের পোস্টঃ </p>
               <p>
                 <Link
-                  to={`${nextPost.category}/${nextPost.id}`}
+                  to={`/${nextPost.category}/${nextPost.id}`}
                   dangerouslySetInnerHTML={{
                     __html: sliceCat(nextPost.title.rendered),
                   }}

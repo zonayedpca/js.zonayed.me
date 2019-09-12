@@ -1,5 +1,5 @@
 export const findPrevNextPost = (allData, currentData) => {
-  const [__blank, category, id] = currentData.split('/')
+  const [, category, id] = currentData.split('/')
 
   let prevPost = null
   let nextPost = null

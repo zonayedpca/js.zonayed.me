@@ -7,7 +7,7 @@ import { topicTranslation } from '../utils'
 import './topicpage.css'
 
 const TopicPage = ({ path, pageContext: { data } }) => {
-  const topic = path
+  const topic = path.replace('/', '')
   return (
     <Layout>
       <SEO title={topicTranslation(path)} />

@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -26,13 +26,13 @@ const Layout = ({ children, home }) => {
   `)
 
   return (
-    <Fragment className="app">
+    <>
       <Intro home={home} siteTitle={data.site.siteMetadata.title} />
       <div className="contents">
         <Main>{children}</Main>
         <Footer />
       </div>
-    </Fragment>
+    </>
   )
 }
 

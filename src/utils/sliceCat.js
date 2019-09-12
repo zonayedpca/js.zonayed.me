@@ -11,7 +11,7 @@ const sliceCat = text => {
   ]
   const hasThisTitle = target.some(item => String(text).includes(item))
   if (hasThisTitle) {
-    result = String(result).split(/[\:|\ঃ]/)[1]
+    result = String(result).split(/[:|ঃ]/)[1]
   }
   return result
 }
