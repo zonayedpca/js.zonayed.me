@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
+import { findPrevNextPost, sliceCat } from '../utils'
 
 import './post.css'
 
-const Post = ({ title, content }) => {
+const Post = ({ allData, path, title, content }) => {
+  const [prevPost, nextPost] = findPrevNextPost(allData, path)
   return (
     <div className="post">
       <div>
@@ -11,22 +15,36 @@ const Post = ({ title, content }) => {
       <div>
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
-      <div>
+      <div className="pagination">
         <ul>
-          <li className="prev">
-            <img />
-            <p>আগের পোস্টঃ </p>
-            <p>
-              <a href="#">পোস্টটা এখানে যাবে</a>
-            </p>
-          </li>
-          <li className="next">
-            <img />
-            <p>পরের পোস্টঃ </p>
-            <p>
-              <a href="#">পোস্টটা এখানে যাবে</a>
-            </p>
-          </li>
+          {prevPost && (
+            <li className="prev">
+              <img />
+              <p>আগের পোস্টঃ </p>
+              <p>
+                <Link
+                  to={`${prevPost.category}/${prevPost.id}`}
+                  dangerouslySetInnerHTML={{
+                    __html: sliceCat(prevPost.title.rendered),
+                  }}
+                />
+              </p>
+            </li>
+          )}
+          {nextPost && (
+            <li className="next">
+              <img />
+              <p>পরের পোস্টঃ </p>
+              <p>
+                <Link
+                  to={`${nextPost.category}/${nextPost.id}`}
+                  dangerouslySetInnerHTML={{
+                    __html: sliceCat(nextPost.title.rendered),
+                  }}
+                />
+              </p>
+            </li>
+          )}
         </ul>
       </div>
     </div>

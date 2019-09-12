@@ -81,3 +81,18 @@
 .post .shortcode_wysija {
   display: none;
 }
+
+.post .pagination ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.post .pagination ul li {
+  margin: 0;
+  flex: 1;
+}
+
+.post .pagination ul li.next {
+  text-align: right;
+}
