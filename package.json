@@ -18,7 +18,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-utterances": "^0.6.4"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

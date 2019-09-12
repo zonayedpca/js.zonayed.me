@@ -9574,6 +9574,11 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
+react-utterances@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/react-utterances/-/react-utterances-0.6.4.tgz#bf8da25d188bf7b2c0a873700e534b901422add6"
+  integrity sha512-g+oeVCUxGKj4atlql3P+IyGcbxU+GNhbRoOPPzkfQIex85Y92UJU0PnzFnA+D3zJwSUTVT3Rna5htEuvz/rqAg==
+
 react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"

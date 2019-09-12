@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import ReactUtterences from 'react-utterances'
 
 import { findPrevNextPost, sliceCat } from '../utils'
 
 import './post.css'
+
+const repo = 'zonayedpca/GithubComments'
 
 const Post = ({ allData, path, title, content }) => {
   const [prevPost, nextPost] = findPrevNextPost(allData, path)
@@ -44,6 +47,9 @@ const Post = ({ allData, path, title, content }) => {
             </li>
           )}
         </ul>
+      </div>
+      <div>
+        <ReactUtterences repo={repo} type={'og:title'} />
       </div>
     </div>
   )
