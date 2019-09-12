@@ -39,4 +39,9 @@
 
 .header .nav-item .items ul {
   display: flex;
+  list-style: none;
+}
+
+.header .nav-item .items ul li img {
+  width: 25px;
 }

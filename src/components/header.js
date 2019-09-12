@@ -5,6 +5,8 @@ import inverseLogo from '../assets/images/inverse-logo.svg'
 
 import './header.css'
 
+import github from '../assets/images/github.svg'
+
 const Header = ({ siteTitle, home }) => {
   return (
     <header className="header">
@@ -21,8 +23,15 @@ const Header = ({ siteTitle, home }) => {
         </div>
         <div className="items">
           <ul>
-            <li>Github</li>
-            <li>Star</li>
+            <li>
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="https://github.com/zonayedpca/js.zonayed.me"
+              >
+                <img src={github} alt="github" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
