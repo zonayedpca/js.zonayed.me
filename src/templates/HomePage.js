@@ -9,7 +9,7 @@ import './homepage.css'
 const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
   return (
-    <Layout home>
+    <Layout dataTitle={data} home>
       <SEO title="হোমপেজ" />
       <div className="contents-area">
         {topics.map(topic => (

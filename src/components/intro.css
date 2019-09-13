@@ -16,7 +16,7 @@
 }
 
 .intro .intro-area {
-  flex: 2;
+  flex: 1;
   display: flex;
 }
 
@@ -61,6 +61,6 @@
   align-self: center;
 }
 
-.intro .bookmarks-area {
+.intro .action-area {
   flex: 1;
 }

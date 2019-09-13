@@ -1,37 +1,55 @@
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import React from 'react'
 
 import Header from './header'
 
 import './intro.css'
+import Search from './search'
+import Bookmark from './bookmark'
 
-const Intro = ({ siteTitle, home }) => (
-  <div className={`intro ${home ? 'home' : ''}`}>
-    <Header home={home} siteTitle={siteTitle} />
-    {home && (
-      <>
-        <div className="intro-area">
-          <div className="intro-main">
-            <div className="intro-text">
-              <h2>জাভাস্ক্রিপ্ট শিখুন</h2>
-              <p>সম্পূর্ন বাংলায় জুনায়েদ এর সাথে</p>
+const Intro = ({ siteTitle, home, dataTitle }) => {
+  const [input, setInput] = useState('')
+  return (
+    <div className={`intro ${home ? 'home' : ''}`}>
+      <Header home={home} siteTitle={siteTitle} />
+      {home && (
+        <>
+          <div className="intro-area">
+            <div className="intro-main">
+              <div className="intro-text">
+                <h2>জাভাস্ক্রিপ্ট শিখুন</h2>
+                <p>সম্পূর্ন বাংলায় জুনায়েদ এর সাথে</p>
+              </div>
+              <div className="search">
+                <input
+                  name="term"
+                  onChange={({ target: { value } }) =>
+                    setInput(value.trimStart())
+                  }
+                  value={input}
+                  placeholder="কি খুঁজতে চাচ্ছেন?"
+                />
+                <p>
+                  <span>বাংলায় সার্চ করুন</span>
+                </p>
+              </div>
             </div>
-            <div className="search">
-              <input name="term" placeholder="কি খুঁজতে চাচ্ছেন?" />
-              <p>
-                <span>বাংলায় সার্চ করুন</span>
-              </p>
+            <div className="intro-book">
+              <p />
             </div>
           </div>
-          <div className="intro-book">
-            <p />
+          <div className="action-area">
+            {input ? (
+              <Search input={input} dataTitle={dataTitle} />
+            ) : (
+              <Bookmark />
+            )}
           </div>
-        </div>
-        <div className="bookmarks-area">BookMark</div>
-      </>
-    )}
-  </div>
-)
+        </>
+      )}
+    </div>
+  )
+}
 
 Intro.propTypes = {
   siteTitle: PropTypes.string,
