@@ -1,0 +1,13 @@
+.comment {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: solid 3px #323330;
+}
+
+.comment .title {
+  margin-bottom: 50px;
+}
+
+.comment .title h2 {
+  margin-bottom: 15px;
+}

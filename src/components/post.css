@@ -82,6 +82,12 @@
   display: none;
 }
 
+.post .pagination {
+  margin: 50px 0;
+  padding-top: 50px;
+  border-top: solid 3px #323330;
+}
+
 .post .pagination ul {
   display: flex;
   flex-wrap: wrap;
@@ -91,6 +97,20 @@
 .post .pagination ul li {
   margin: 0;
   flex: 1;
+}
+
+.post .pagination ul li p {
+  margin: 0;
+}
+
+.post .pagination ul li .nav {
+  display: inline-block;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #323330;
+  padding: 1px 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
 }
 
 .post .pagination ul li.next {
