@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.card.search {
+  background-color: #323330;
+}
+
 .card:nth-child(3n - 2) {
   margin-left: 0;
 }
@@ -23,7 +27,16 @@
   width: 100%;
 }
 
+.card.search a {
+  color: #f0db4f;
+}
+
 .card a h4 {
   padding: 25px;
   font-size: 20px;
+}
+
+.card img {
+  width: 25px;
+  margin-right: 25px;
 }

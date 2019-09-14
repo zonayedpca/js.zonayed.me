@@ -7,14 +7,17 @@ import './search.css'
 
 const Search = ({ input, dataTitle }) => {
   const searchData = searchMatch(dataTitle, input)
+
   return (
     <div className="search">
       {searchData.length ? (
         <ul>
           {searchData.map((item, index) => (
             <Card
+              action="search"
               key={item.id}
               id={item.id}
+              topic={item.topic}
               title={item.title.rendered}
               index={index}
             />

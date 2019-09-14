@@ -1,12 +1,21 @@
 export const searchMatch = (allData, term) => {
-  const dataArr = []
-  Object.keys(allData).map(key => dataArr.push(...allData[key]))
-  const result = dataArr.filter(item =>
-    String(item.title.rendered)
-      .toLowerCase()
-      .includes(term)
-      ? item
-      : false
-  )
-  return result.slice(0, 3)
+  return Object.keys(allData)
+    .map(key =>
+      allData[key].map(item => {
+        if (
+          String(item.title.rendered)
+            .toLowerCase()
+            .includes(term)
+        ) {
+          return {
+            title: item.title,
+            topic: key,
+            id: item.id,
+          }
+        }
+      })
+    )
+    .flat()
+    .filter(item => item)
+    .slice(0, 3)
 }

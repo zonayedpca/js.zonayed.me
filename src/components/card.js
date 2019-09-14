@@ -3,14 +3,17 @@ import { Link } from 'gatsby'
 
 import { sliceCat } from '../utils'
 
+import search from '../assets/images/search.svg'
+
 import './card.css'
 
-const Card = ({ id, title, index, topic }) => {
+const Card = ({ id, title, action, topic }) => {
   return (
-    <li className="card">
+    <li className={`card ${action ? action : ''}`}>
       <Link to={`/${topic}/${id}`}>
         <h4 dangerouslySetInnerHTML={{ __html: sliceCat(title) }} />
       </Link>
+      {action && <img src={search} alt="search" />}
     </li>
   )
 }
