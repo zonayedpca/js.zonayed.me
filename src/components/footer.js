@@ -38,7 +38,7 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://react.zonayed.me"
               >
                 রিঅ্যাক্ট জেএস শিখুন
               </a>
@@ -47,7 +47,7 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://medium.com/@zonayedpca"
               >
                 আমি মিডিয়ামে
               </a>
@@ -56,7 +56,7 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://with.zonayed.me/bn"
               >
                 আমার ব্লগ
               </a>
@@ -70,7 +70,7 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               >
                 এমডিএন ডকুমেন্টেশন
               </a>
@@ -79,7 +79,7 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://www.udemy.com/the-complete-javascript-course/"
               >
                 ইউডেমি কোর্স
               </a>
@@ -88,9 +88,9 @@ const Footer = () => {
               <a
                 target="__blank"
                 rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
+                href="https://eloquentjavascript.net/"
               >
-                বই
+                Eloquent JavaScript
               </a>
             </li>
           </ul>
@@ -105,7 +105,7 @@ const Footer = () => {
           <a
             target="__blank"
             rel="noopener noreferrer"
-            href="https://github.com/zonayedpca/js.zonayed.me"
+            href="https://zonayed.me"
           >
             জুনায়েদ আহমেদ
           </a>
