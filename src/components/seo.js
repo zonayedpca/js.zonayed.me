@@ -73,8 +73,16 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
+  lang: `bn`,
+  meta: [
+    'জাভাস্ক্রিপ্ট',
+    'বাংলা জাভাস্ক্রিপ্ট',
+    'জাভাস্ক্রিপ্ট শিখুন',
+    'JavaScript',
+    'Bengali JavaScript',
+    'Bangla JavaScript',
+    'Learn JavaScript',
+  ],
   description: ``,
 }
 

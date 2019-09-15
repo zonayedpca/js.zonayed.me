@@ -7,9 +7,10 @@ import Catalog from '../components/catalog'
 import './postpage.css'
 
 const PostPage = ({ path, pageContext: { data, allData } }) => {
+  console.log(data)
   return (
     <Layout>
-      <SEO title={data.title.rendered} />
+      <SEO title={data.title.rendered} description={data.excerpt.rendered} />
       <div className="post-area">
         <Post
           allData={allData}
