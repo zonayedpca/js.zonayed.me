@@ -4,7 +4,6 @@
   min-height: auto;
   padding: 0 100px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   border-top: solid 3px #323330;
   border-bottom: solid 3px #323330;

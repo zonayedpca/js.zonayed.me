@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Post from '../components/post'
 import Catalog from '../components/catalog'
 
+import { handleLastRead } from '../utils'
+
 import './postpage.css'
 
 const PostPage = ({ path, pageContext: { data, allData } }) => {
+  useEffect(() => {
+    handleLastRead({
+      id: data.id,
+      title: data.title.rendered,
+      topic: path.split('/')[1],
+    })
+  })
   return (
     <Layout>
       <SEO title={data.title.rendered} description={data.excerpt.rendered} />

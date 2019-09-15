@@ -8,7 +8,8 @@
   align-items: center;
 }
 
-.card.search {
+.card.search,
+.card.last-read {
   background-color: #323330;
 }
 
@@ -27,7 +28,8 @@
   width: 100%;
 }
 
-.card.search a {
+.card.search a,
+.card.last-read a {
   color: #f0db4f;
 }
 

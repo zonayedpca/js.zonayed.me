@@ -5,7 +5,7 @@ import Header from './header'
 
 import './intro.css'
 import Search from './search'
-import Bookmark from './bookmark'
+import Lastread from './lastread'
 
 const Intro = ({ siteTitle, home, dataTitle }) => {
   const [input, setInput] = useState('')
@@ -42,7 +42,7 @@ const Intro = ({ siteTitle, home, dataTitle }) => {
             {input ? (
               <Search input={input} dataTitle={dataTitle} />
             ) : (
-              <Bookmark />
+              <Lastread />
             )}
           </div>
         </>
