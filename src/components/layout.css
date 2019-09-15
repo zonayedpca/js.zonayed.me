@@ -12,6 +12,16 @@
   font-weight: normal;
 }
 
+::-moz-selection {
+  color: #f0db4f;
+  background: #323330;
+}
+
+::selection {
+  color: #f0db4f;
+  background: #323330;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
