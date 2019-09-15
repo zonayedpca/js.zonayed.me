@@ -63,3 +63,23 @@
 .intro .action-area {
   flex: 1;
 }
+
+@media only screen and (max-width: 1200px) {
+  .intro {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .intro {
+    padding: 0 25px;
+  }
+
+  .intro .intro-area .intro-main {
+    flex: 1;
+  }
+
+  .intro .intro-area .intro-main .search input {
+    width: 100%;
+  }
+}

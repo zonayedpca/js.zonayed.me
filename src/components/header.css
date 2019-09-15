@@ -45,3 +45,9 @@
 .header .nav-item .items ul li img {
   width: 25px;
 }
+
+@media only screen and (max-width: 991px) {
+  .header .nav-item {
+    padding: 15px 0;
+  }
+}

@@ -40,3 +40,15 @@
 .topic-list ul li a.current-post {
   font-weight: bolder;
 }
+
+@media only screen and (max-width: 1200px) {
+  .topic {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .topic {
+    padding: 0 25px;
+  }
+}

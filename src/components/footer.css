@@ -68,3 +68,15 @@
   font-weight: bolder;
   border-radius: 4px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding: 100px 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 50px 25px;
+  }
+}

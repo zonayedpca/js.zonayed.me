@@ -6,3 +6,16 @@
   padding-left: 50px;
   border-left: solid 3px #323330;
 }
+
+@media only screen and (max-width: 1200px) {
+  .catalog {
+    width: 300px;
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .catalog {
+    padding: 25px;
+  }
+}

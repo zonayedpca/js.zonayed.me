@@ -116,3 +116,60 @@
 .post .pagination ul li.next {
   text-align: right;
 }
+
+@media only screen and (max-width: 1200px) {
+  .post {
+    width: calc(100% - 300px);
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .post {
+    padding: 25px;
+  }
+
+  .post h2.title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .post h2 {
+    font-size: 32px;
+  }
+
+  .post h3 {
+    font-size: 28px;
+  }
+
+  .post h4 {
+    font-size: 26px;
+  }
+
+  .post h5 {
+    font-size: 24px;
+  }
+
+  .post h6 {
+    font-size: 22px;
+  }
+
+  .post p,
+  .post .section-divider {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .post ul li {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+  .post code {
+    font-size: 16px;
+  }
+
+  .post pre {
+    font-size: 16px;
+  }
+}

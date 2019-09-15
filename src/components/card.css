@@ -42,3 +42,22 @@
   width: 25px;
   margin-right: 25px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    flex-basis: calc(100% / 2 - 20px);
+  }
+
+  .card:nth-child(3n - 2),
+  .card:nth-child(3n) {
+    margin: 15px;
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .card:nth-child(2n - 1) {
+    margin-left: 0;
+  }
+}
