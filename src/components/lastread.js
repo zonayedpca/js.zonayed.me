@@ -6,7 +6,7 @@ import './lastread.css'
 import Card from './card'
 
 const Lastread = () => {
-  const [post, setPost] = useState(handleLastRead())
+  const [post] = useState(handleLastRead())
   if (!post) {
     return null
   }

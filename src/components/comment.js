@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactUtterences from 'react-utterances'
 
 import './comment.css'
@@ -6,6 +6,13 @@ import './comment.css'
 const repo = 'zonayedpca/GithubComments'
 
 const Comment = () => {
+  const [enable, setEnable] = useState(false)
+  useEffect(() => {
+    setEnable(true)
+    return () => {
+      setEnable(false)
+    }
+  }, [enable])
   return (
     <div className="comment">
       <div className="title">
@@ -15,7 +22,7 @@ const Comment = () => {
           সন্দেহ থাকে তাহলে এখানে জানাতে পারবেন।
         </p>
       </div>
-      <ReactUtterences repo={repo} type={'og:title'} />
+      {enable && <ReactUtterences repo={repo} type={'og:title'} />}
     </div>
   )
 }
