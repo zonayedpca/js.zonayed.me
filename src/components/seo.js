@@ -63,7 +63,6 @@ function SEO({ description, lang, meta, title }) {
           property: 'og:image:width',
           content: '1200',
         },
-
         {
           property: 'og:image:height',
           content: '675',
@@ -91,15 +90,7 @@ function SEO({ description, lang, meta, title }) {
 
 SEO.defaultProps = {
   lang: `bn`,
-  meta: [
-    'জাভাস্ক্রিপ্ট',
-    'বাংলা জাভাস্ক্রিপ্ট',
-    'জাভাস্ক্রিপ্ট শিখুন',
-    'JavaScript',
-    'Bengali JavaScript',
-    'Bangla JavaScript',
-    'Learn JavaScript',
-  ],
+  meta: [],
   description: ``,
 }
 

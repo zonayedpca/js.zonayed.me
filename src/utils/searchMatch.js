@@ -13,6 +13,7 @@ export const searchMatch = (allData, term) => {
             id: item.id,
           }
         }
+        return 0
       })
     )
     .flat()
