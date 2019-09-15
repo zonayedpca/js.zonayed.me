@@ -5,6 +5,7 @@
 .header .nav-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 25px 0;
 }
 
@@ -13,7 +14,6 @@
 }
 
 .header .nav-item .brand {
-  flex: 1;
   margin: 0;
 }
 

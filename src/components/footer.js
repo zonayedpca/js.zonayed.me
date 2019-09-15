@@ -61,15 +61,6 @@ const Footer = () => {
                 আমার ব্লগ
               </a>
             </li>
-            <li>
-              <a
-                target="__blank"
-                rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
-              >
-                অন্যকিছু শিখুন
-              </a>
-            </li>
           </ul>
         </div>
         <div className="child">
@@ -100,15 +91,6 @@ const Footer = () => {
                 href="https://github.com/zonayedpca/js.zonayed.me"
               >
                 বই
-              </a>
-            </li>
-            <li>
-              <a
-                target="__blank"
-                rel="noopener noreferrer"
-                href="https://github.com/zonayedpca/js.zonayed.me"
-              >
-                অমুক ডকুমেন্টেশন
               </a>
             </li>
           </ul>
