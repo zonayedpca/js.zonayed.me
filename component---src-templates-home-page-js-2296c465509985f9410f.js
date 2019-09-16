@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{226:function(e,a,t){"use strict";t.r(a);t(14),t(15),t(8),t(18);var n=t(0),c=t.n(n),r=t(224),o=t(223),i=t(225);t(230);a.default=function(e){var a=e.pageContext.data,t=Object.keys(a);return c.a.createElement(r.a,{dataTitle:a,home:!0},c.a.createElement(o.a,{title:"হোমপেজ"}),c.a.createElement("div",{className:"contents-area"},t.map(function(e){return c.a.createElement(i.a,{key:e,topic:e,data:a[e]})})))}}}]);
+//# sourceMappingURL=component---src-templates-home-page-js-2296c465509985f9410f.js.map
