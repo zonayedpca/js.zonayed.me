@@ -25,7 +25,7 @@ const Intro = ({ siteTitle, home, dataTitle }) => {
                   autoComplete="off"
                   name="term"
                   onChange={({ target: { value } }) =>
-                    setInput(value.trimStart())
+                    setInput(value.trimStart().toLowerCase())
                   }
                   value={input}
                   placeholder="কি খুঁজতে চাচ্ছেন?"
