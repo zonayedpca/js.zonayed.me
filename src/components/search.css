@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.search .not-found {
+  padding: 50px 0;
+}
+
 @media only screen and (max-width: 1200px) {
   .search ul li:nth-child(3n) {
     display: none;

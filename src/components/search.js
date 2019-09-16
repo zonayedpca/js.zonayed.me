@@ -24,7 +24,7 @@ const Search = ({ input, dataTitle }) => {
           ))}
         </ul>
       ) : (
-        <p>Suggest Something Else</p>
+        <p className="not-found">কিছু পাওয়া যায়নি!</p>
       )}
     </div>
   )
