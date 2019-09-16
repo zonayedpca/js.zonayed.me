@@ -48,3 +48,15 @@
 .error-area .action ul li .btn-bug {
   background: #f44336;
 }
+
+@media only screen and (max-width: 991px) {
+  .error-area {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .error-area {
+    padding: 25px;
+  }
+}

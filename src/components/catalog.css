@@ -7,6 +7,24 @@
   border-left: solid 3px #323330;
 }
 
+.catalog .action {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 10;
+  opacity: 0;
+}
+
+.catalog .action button {
+  border: none;
+  background-color: #323330;
+  border-radius: 100%;
+  height: 45px;
+  width: 45px;
+  line-height: 1px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1200px) {
   .catalog {
     width: 300px;
@@ -17,5 +35,24 @@
 @media only screen and (max-width: 991px) {
   .catalog {
     padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .catalog {
+    position: fixed;
+    overflow: scroll;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transition: 0.5s all;
+  }
+
+  .catalog .action {
+    opacity: 1;
+  }
+
+  .catalog.mobile {
+    right: -100%;
   }
 }

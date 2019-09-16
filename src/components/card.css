@@ -61,3 +61,23 @@
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .card {
+    flex-basis: calc(100% / 2 - 7.5px);
+    margin: 7.5px;
+  }
+
+  .card:nth-child(3n - 2),
+  .card:nth-child(3n) {
+    margin: 7.5px;
+  }
+
+  .card:nth-child(2n - 1) {
+    margin-left: 0;
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
