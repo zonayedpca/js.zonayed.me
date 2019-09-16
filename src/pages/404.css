@@ -1,0 +1,50 @@
+.error-area {
+  padding: 100px;
+}
+
+.error-area .img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.error-area .details {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.error-area .details p {
+  font-size: 22px;
+}
+
+.error-area .action {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.error-area .action ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.error-area .action ul li {
+  padding: 0 15px;
+}
+
+.error-area .action ul li .btn {
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.error-area .action ul li .btn-home {
+  background: #4caf50;
+}
+
+.error-area .action ul li .btn-bug {
+  background: #f44336;
+}
