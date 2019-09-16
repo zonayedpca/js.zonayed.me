@@ -10,9 +10,6 @@
   margin-bottom: 25px;
 }
 
-.post h1 {
-}
-
 .post h2 {
   font-size: 36px;
 }
@@ -50,9 +47,6 @@
   line-height: 1.8;
 }
 
-.post ul {
-}
-
 .post ul li {
   margin-top: 15px;
   font-size: 22px;
@@ -73,9 +67,6 @@
   margin: 0;
   text-align: center;
   padding: 50px 0;
-}
-
-.post img {
 }
 
 .post .shortcode_wysija {
