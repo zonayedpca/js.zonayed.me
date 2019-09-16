@@ -22,6 +22,7 @@ const Intro = ({ siteTitle, home, dataTitle }) => {
               </div>
               <div className="search">
                 <input
+                  autoComplete="off"
                   name="term"
                   onChange={({ target: { value } }) =>
                     setInput(value.trimStart())

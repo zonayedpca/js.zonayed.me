@@ -17,6 +17,7 @@
 .intro .intro-area {
   flex: 1;
   display: flex;
+  transition: 0.2s all;
 }
 
 .intro .intro-area .intro-main {
@@ -81,5 +82,36 @@
 
   .intro .intro-area .intro-main .search input {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 661px) {
+  .intro.home {
+    height: auto;
+  }
+
+  .intro .intro-area .intro-main {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .intro .intro-area .intro-book {
+    display: none;
+  }
+
+  .intro .intro-area .intro-main .intro-text h2 {
+    font-size: 42px;
+  }
+
+  .intro .intro-area .intro-main .intro-text p {
+    font-size: 22px;
+  }
+
+  .intro .intro-area .intro-main .search input {
+    font-size: 16px;
+  }
+
+  .intro .intro-area .intro-main .search p span {
+    font-size: 14px;
   }
 }

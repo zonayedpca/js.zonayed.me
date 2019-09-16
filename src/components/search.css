@@ -7,3 +7,9 @@
     display: none;
   }
 }
+
+@media only screen and (max-width: 661px) {
+  .search ul {
+    flex-wrap: wrap;
+  }
+}

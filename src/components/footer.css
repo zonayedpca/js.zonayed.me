@@ -93,3 +93,18 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 661px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .foot.foot-child {
+    flex-wrap: wrap;
+  }
+
+  .footer .foot.foot-child .child {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+}

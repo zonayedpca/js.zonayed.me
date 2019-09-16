@@ -51,3 +51,17 @@
     padding: 15px 0;
   }
 }
+
+@media only screen and (max-width: 661px) {
+  .header {
+    flex: 0;
+  }
+
+  .header .nav-item.home {
+    padding: 25px 0;
+  }
+
+  .header .nav-item .brand a .brand-logo h1 {
+    display: none;
+  }
+}

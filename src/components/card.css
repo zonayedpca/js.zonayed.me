@@ -81,3 +81,11 @@
     margin-right: 0;
   }
 }
+
+@media only screen and (max-width: 661px) {
+  .card:nth-child(n) {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
