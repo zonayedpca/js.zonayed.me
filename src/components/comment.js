@@ -3,7 +3,7 @@ import ReactUtterences from 'react-utterances'
 
 import './comment.css'
 
-const repo = 'zonayedpca/GithubComments'
+const repo = 'zonayedpca/js.zonayed.me'
 
 const Comment = () => {
   const [enable, setEnable] = useState(false)
