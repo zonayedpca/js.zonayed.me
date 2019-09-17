@@ -18,7 +18,10 @@ const PostPage = ({ path, pageContext: { data, allData } }) => {
   })
   return (
     <Layout>
-      <SEO title={data.title.rendered} description={data.excerpt.rendered} />
+      <SEO
+        title={data.title.rendered}
+        description={String(data.excerpt.rendered).replace(/<[^>]*>/g, '')}
+      />
       <div className="post-area">
         <Post
           allData={allData}
