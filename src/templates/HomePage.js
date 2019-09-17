@@ -10,7 +10,7 @@ const HomePage = ({ pageContext: { data } }) => {
   const topics = Object.keys(data)
   return (
     <Layout dataTitle={data} home>
-      <SEO title="হোমপেজ" />
+      <SEO title="হাতেকলমে জাভাস্ক্রিপ্ট" />
       <div className="contents-area">
         {topics.map(topic => (
           <Category key={topic} topic={topic} data={data[topic]} />
