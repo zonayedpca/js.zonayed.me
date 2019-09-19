@@ -46,6 +46,33 @@
   width: 25px;
 }
 
+.header .switch {
+  position: relative;
+  height: 25px;
+  width: 45px;
+  cursor: pointer;
+  margin-left: 15px;
+  background: var(--secondary-color);
+  border-radius: 40px;
+  margin-bottom: 15px;
+}
+
+.header .switch:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  background: var(--primary-color);
+  border-radius: 40px;
+  transition: 0.5s all;
+}
+
+.header .switch.dark:after {
+  left: calc(100% - 25px);
+}
+
 @media only screen and (max-width: 991px) {
   .header .nav-item {
     padding: 15px 0;

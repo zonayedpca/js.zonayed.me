@@ -1,8 +1,8 @@
 .card {
   flex-basis: calc(100% / 3 - 20px);
   margin: 15px;
-  border: solid 3px #323330;
-  background-color: #f0db4f;
+  border: solid 3px var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
 
 .card.search,
 .card.last-read {
-  background-color: #323330;
+  background-color: var(--secondary-color);
 }
 
 .card:nth-child(3n - 2) {
@@ -23,7 +23,7 @@
 
 .card a {
   display: block;
-  color: #323330;
+  color: var(--font-color);
   text-decoration: none;
   width: 100%;
 }

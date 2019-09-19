@@ -12,14 +12,29 @@
   font-weight: normal;
 }
 
+:root {
+  --primary-color: #f0db4f;
+  --secondary-color: #323330;
+  --font-color: #323330;
+  --font-reverse-color: var(--font-color);
+  --off-white-bg-color: #e9ebee;
+}
+
+[data-mode='dark'] {
+  --primary-color: #333;
+  --secondary-color: #eee;
+  --font-color: #333;
+  --bg-color: #fff;
+}
+
 ::-moz-selection {
-  color: #f0db4f;
-  background: #323330;
+  color: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 ::selection {
-  color: #f0db4f;
-  background: #323330;
+  color: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 html {
@@ -92,8 +107,8 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: var(--primary-color);
+  color: var(--font-color);
 }
 small {
   font-size: 80%;
@@ -171,7 +186,7 @@ button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid var(--secondary-color);
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -225,7 +240,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--font-color);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
