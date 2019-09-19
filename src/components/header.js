@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
 import inverseLogo from '../assets/images/inverse-logo.svg'
@@ -7,11 +7,9 @@ import './header.css'
 
 import github from '../assets/images/github.svg'
 
-const Header = ({ siteTitle, home }) => {
-  const [mode, setMode] = useState(false)
-
+const Header = ({ siteTitle, mode, handleMode, home }) => {
   return (
-    <header data-mode={mode ? 'dark' : 'none'} className="header">
+    <header className="header">
       <div className={`nav-item ${home ? 'home' : ''}`}>
         <div className="brand">
           <Link to="/">
@@ -36,7 +34,7 @@ const Header = ({ siteTitle, home }) => {
             </li>
             <li>
               <div
-                onClick={() => setMode(!mode)}
+                onClick={() => handleMode(!mode)}
                 className={`switch ${mode && `dark`}`}
               ></div>
             </li>

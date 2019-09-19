@@ -1,5 +1,6 @@
 .contents-area {
   padding: 100px 0;
+  background-color: var(--bg-color);
 }
 
 @media only screen and (max-width: 991px) {

@@ -17,14 +17,15 @@
   --secondary-color: #323330;
   --font-color: #323330;
   --font-reverse-color: var(--font-color);
-  --off-white-bg-color: #e9ebee;
+  --bg-color: #fff;
+  --off-bg-color: #e9ebee;
 }
 
 [data-mode='dark'] {
   --primary-color: #333;
   --secondary-color: #eee;
   --font-color: #333;
-  --bg-color: #fff;
+  --bg-color: #333;
 }
 
 ::-moz-selection {

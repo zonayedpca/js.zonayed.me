@@ -7,11 +7,16 @@ import './intro.css'
 import Search from './search'
 import Lastread from './lastread'
 
-const Intro = ({ siteTitle, home, dataTitle }) => {
+const Intro = ({ siteTitle, home, mode, handleMode, dataTitle }) => {
   const [input, setInput] = useState('')
   return (
     <div className={`intro ${home ? 'home' : ''}`}>
-      <Header home={home} siteTitle={siteTitle} />
+      <Header
+        home={home}
+        mode={mode}
+        handleMode={handleMode}
+        siteTitle={siteTitle}
+      />
       {home && (
         <>
           <div className="intro-area">
