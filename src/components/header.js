@@ -9,8 +9,9 @@ import github from '../assets/images/github.svg'
 
 const Header = ({ siteTitle, home }) => {
   const [mode, setMode] = useState(false)
+
   return (
-    <header className="header">
+    <header data-mode={mode ? 'dark' : 'none'} className="header">
       <div className={`nav-item ${home ? 'home' : ''}`}>
         <div className="brand">
           <Link to="/">
