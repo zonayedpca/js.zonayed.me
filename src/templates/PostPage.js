@@ -4,12 +4,13 @@ import SEO from '../components/seo'
 import Post from '../components/post'
 import Catalog from '../components/catalog'
 
-import { handleLastRead } from '../utils'
+import { handleLastRead, logInstruction } from '../utils'
 
 import './postpage.css'
 
 const PostPage = ({ path, pageContext: { data, allData } }) => {
   useEffect(() => {
+    logInstruction()
     handleLastRead({
       id: data.id,
       title: data.title.rendered,

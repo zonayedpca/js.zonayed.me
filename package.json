@@ -2,7 +2,7 @@
   "name": "js.zonayed.me",
   "private": true,
   "description": "হাতেকলমে জাভাস্ক্রিপ্ট-সম্পূর্ণ বাংলায় জাভাস্ক্রিপ্ট শিখুন",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Zonayed Ahmed<contact@zonayed.me>",
   "dependencies": {
     "gatsby": "^2.15.9",
