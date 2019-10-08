@@ -93,6 +93,15 @@ const Footer = () => {
                 Eloquent JavaScript
               </a>
             </li>
+            <li>
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="https://github.com/getify/You-Dont-Know-JS"
+              >
+                You Don't Know JS
+              </a>
+            </li>
           </ul>
         </div>
       </div>
