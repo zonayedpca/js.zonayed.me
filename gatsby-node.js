@@ -8,6 +8,14 @@
 const path = require('path')
 const axios = require('axios')
 
+const BASIC = 'JavaScript-Basic'
+const ADVANCE = 'javascript-advance'
+const ES6 = 'ES6'
+const DOM = 'javascript-dom'
+const DAILY = 'JavaScript-Daily'
+const ALGODS = 'JavaScript-AlgoDS'
+const SOFT = 'JavaScript-Soft'
+
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const homePageTemplate = path.resolve('src/templates/HomePage.js')
@@ -16,25 +24,25 @@ exports.createPages = ({ actions }) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data: basic } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=164&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${BASIC}/index.json`
       )
       const { data: advance } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=158&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${ADVANCE}/index.json`
       )
       const { data: es6 } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=150&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${ES6}/index.json`
       )
       const { data: dom } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=194&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${DOM}/index.json`
       )
       const { data: daily } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=168&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${DAILY}/index.json`
       )
       const { data: algods } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=200&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${ALGODS}/index.json`
       )
       const { data: soft } = await axios(
-        'https://with.zonayed.me/wp-json/wp/v2/posts?tags=166&order=asc&per_page=30'
+        `http://with.zonayed.me/api/${SOFT}/index.json`
       )
       const data = {
         basic,
@@ -45,33 +53,34 @@ exports.createPages = ({ actions }) => {
         algods,
         soft,
       }
+      console.log(data)
       const dataTitle = {
         basic: basic.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         advance: advance.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         es6: es6.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         dom: dom.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         daily: daily.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         algods: algods.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
         soft: soft.map(item => ({
-          id: item.id,
+          id: item.contentDir,
           title: item.title,
         })),
       }
@@ -79,35 +88,38 @@ exports.createPages = ({ actions }) => {
     } catch (err) {
       return reject(err)
     }
-  }).then(res => {
-    if (res.errors) {
-      return reject('An Error Occured')
-    }
-    createPage({
-      path: `/`,
-      context: {
-        data: res.dataTitle,
-      },
-      component: homePageTemplate,
-    })
-    Object.keys(res.dataTitle).map(topic => {
+  })
+    .then(res => {
+      if (res.errors) {
+        return reject('An Error Occured')
+      }
       createPage({
-        path: `/${topic}`,
+        path: `/`,
         context: {
-          data: res.dataTitle[topic],
+          data: res.dataTitle,
         },
-        component: topicPageTemplate,
+        component: homePageTemplate,
       })
-      res.data[topic].map(item => {
+      Object.keys(res.dataTitle).map(topic => {
         createPage({
-          path: `/${topic}/${item.id}`,
+          path: `/${topic}`,
           context: {
-            data: item,
-            allData: res.dataTitle,
+            data: res.dataTitle[topic],
           },
-          component: postPageTemplate,
+          component: topicPageTemplate,
+        })
+        res.dataTitle[topic].map(async item => {
+          createPage({
+            path: `/${topic}/${item.id}`,
+            context: {
+              id: item.contentDir,
+            },
+            component: postPageTemplate,
+          })
         })
       })
     })
-  })
+    .catch(err => {
+      console.log(err)
+    })
 }

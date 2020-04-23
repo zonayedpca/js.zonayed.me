@@ -20,8 +20,8 @@ const Category = ({ topic, data }) => {
         </h3>
       </div>
       <ul>
-        {data.map(({ id, title: { rendered } }, index) => (
-          <Card key={id} id={id} title={rendered} index={index} topic={topic} />
+        {data.map(({ id, title }, index) => (
+          <Card key={id} id={id} title={title} index={index} topic={topic} />
         ))}
       </ul>
     </div>
