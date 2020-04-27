@@ -11,7 +11,7 @@ import './card.css'
 const Card = ({ id, title, action, topic }) => {
   return (
     <li className={`card ${action ? action : ''}`}>
-      <Link to={`/${topic}/${id}`}>
+      <Link to={`/${topic}/post-${id}`}>
         <h4 dangerouslySetInnerHTML={{ __html: sliceCat(title) }} />
       </Link>
       {action && (

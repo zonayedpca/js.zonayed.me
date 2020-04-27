@@ -7,6 +7,7 @@ import { topicTranslation } from '../utils'
 import './topicpage.css'
 
 const TopicPage = ({ path, pageContext: { data } }) => {
+  console.log(data)
   const topic = path.replace('/', '')
   return (
     <Layout>

@@ -8,30 +8,32 @@ import { handleLastRead, logInstruction } from '../utils'
 
 import './postpage.css'
 
-const PostPage = ({ path, pageContext: { data, allData } }) => {
+const PostPage = ({ path, pageContext: { id, data, allData } }) => {
+  window.log = allData
   useEffect(() => {
     logInstruction()
     handleLastRead({
-      id: data.id,
-      title: data.title.rendered,
+      id,
+      title: data.title,
       topic: path.split('/')[1],
     })
   })
   return (
     <Layout>
-      <SEO
-        title={data.title.rendered}
-        description={String(data.excerpt.rendered).replace(/<[^>]*>/g, '')}
+      <p>PostPage</p>
+      {/* <SEO
+        title={data.title}
+        description={'একটা শর্টে লেখার অংশবিশেষ'}
       />
       <div className="post-area">
         <Post
           allData={allData}
           path={path}
-          title={data.title.rendered}
-          content={data.content.rendered}
+          title={data.title}
+          content={data.content}
         />
         <Catalog path={path} topics={allData} />
-      </div>
+      </div> */}
     </Layout>
   )
 }

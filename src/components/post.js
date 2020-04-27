@@ -26,7 +26,7 @@ const Post = ({ allData, path, title, content }) => {
                 <Link
                   to={`/${prevPost.category}/${prevPost.id}`}
                   dangerouslySetInnerHTML={{
-                    __html: sliceCat(prevPost.title.rendered),
+                    __html: sliceCat(prevPost.title),
                   }}
                 />
               </p>
@@ -39,7 +39,7 @@ const Post = ({ allData, path, title, content }) => {
                 <Link
                   to={`/${nextPost.category}/${nextPost.id}`}
                   dangerouslySetInnerHTML={{
-                    __html: sliceCat(nextPost.title.rendered),
+                    __html: sliceCat(nextPost.title),
                   }}
                 />
               </p>

@@ -24,25 +24,25 @@ exports.createPages = ({ actions }) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data: basic } = await axios(
-        `http://with.zonayed.me/api/${BASIC}/index.json`
+        `https://with.zonayed.me/api/${BASIC}/index.json`
       )
       const { data: advance } = await axios(
-        `http://with.zonayed.me/api/${ADVANCE}/index.json`
+        `https://with.zonayed.me/api/${ADVANCE}/index.json`
       )
       const { data: es6 } = await axios(
-        `http://with.zonayed.me/api/${ES6}/index.json`
+        `https://with.zonayed.me/api/${ES6}/index.json`
       )
       const { data: dom } = await axios(
-        `http://with.zonayed.me/api/${DOM}/index.json`
+        `https://with.zonayed.me/api/${DOM}/index.json`
       )
       const { data: daily } = await axios(
-        `http://with.zonayed.me/api/${DAILY}/index.json`
+        `https://with.zonayed.me/api/${DAILY}/index.json`
       )
       const { data: algods } = await axios(
-        `http://with.zonayed.me/api/${ALGODS}/index.json`
+        `https://with.zonayed.me/api/${ALGODS}/index.json`
       )
       const { data: soft } = await axios(
-        `http://with.zonayed.me/api/${SOFT}/index.json`
+        `https://with.zonayed.me/api/${SOFT}/index.json`
       )
       const data = {
         basic,
@@ -53,7 +53,6 @@ exports.createPages = ({ actions }) => {
         algods,
         soft,
       }
-      console.log(data)
       const dataTitle = {
         basic: basic.map(item => ({
           id: item.contentDir,
@@ -101,6 +100,7 @@ exports.createPages = ({ actions }) => {
         component: homePageTemplate,
       })
       Object.keys(res.dataTitle).map(topic => {
+        console.log(topic)
         createPage({
           path: `/${topic}`,
           context: {
@@ -108,15 +108,18 @@ exports.createPages = ({ actions }) => {
           },
           component: topicPageTemplate,
         })
-        res.dataTitle[topic].map(async item => {
-          createPage({
-            path: `/${topic}/${item.id}`,
-            context: {
-              id: item.contentDir,
-            },
-            component: postPageTemplate,
-          })
-        })
+        // res.data[topic].map((item, index) => {
+        //   const post = `post-${index}`
+        //   createPage({
+        //     path: `/${topic}/${post}`,
+        //     context: {
+        //       id: index,
+        //       data: item,
+        //       allData: data,
+        //     },
+        //     component: postPageTemplate,
+        //   })
+        // })
       })
     })
     .catch(err => {

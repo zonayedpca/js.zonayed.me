@@ -6,7 +6,7 @@ import Card from './card'
 
 import './category.css'
 
-const Category = ({ topic, data }) => {
+const Category = ({ id, topic, data }) => {
   return (
     <div key={topic} className="topic">
       <div className="title">
@@ -21,7 +21,7 @@ const Category = ({ topic, data }) => {
       </div>
       <ul>
         {data.map(({ id, title }, index) => (
-          <Card key={id} id={id} title={title} index={index} topic={topic} />
+          <Card key={id} id={index} title={title} index={index} topic={topic} />
         ))}
       </ul>
     </div>
