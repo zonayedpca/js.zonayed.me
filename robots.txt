@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://js.zonayed.me/sitemap.xml
+Host: https://js.zonayed.me
