@@ -9,7 +9,6 @@ import { handleLastRead, logInstruction } from '../utils'
 import './postpage.css'
 
 const PostPage = ({ path, pageContext: { id, data, allData } }) => {
-  window.log = allData
   useEffect(() => {
     logInstruction()
     handleLastRead({
@@ -20,11 +19,7 @@ const PostPage = ({ path, pageContext: { id, data, allData } }) => {
   })
   return (
     <Layout>
-      <p>PostPage</p>
-      {/* <SEO
-        title={data.title}
-        description={'একটা শর্টে লেখার অংশবিশেষ'}
-      />
+      <SEO title={data.title} description={'একটা শর্টে লেখার অংশবিশেষ'} />
       <div className="post-area">
         <Post
           allData={allData}
@@ -33,7 +28,7 @@ const PostPage = ({ path, pageContext: { id, data, allData } }) => {
           content={data.content}
         />
         <Catalog path={path} topics={allData} />
-      </div> */}
+      </div>
     </Layout>
   )
 }

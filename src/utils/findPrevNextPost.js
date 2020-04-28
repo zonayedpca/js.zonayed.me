@@ -6,21 +6,21 @@ export const findPrevNextPost = (allData, currentData) => {
     let nextPost = null
 
     for (let i = 0; i < allData[category].length; i++) {
-      if (allData[category][i].id === Number(id)) {
-        if (allData[category][0].id === Number(id)) {
+      if (`post-${i}` === id) {
+        if (`post-${0}` === id) {
           prevPost = null
         } else {
           prevPost = {
-            id: allData[category][i - 1].id,
+            id: `post-${i - 1}`,
             title: allData[category][i - 1].title,
             category: category,
           }
         }
-        if (allData[category][allData[category].length - 1].id === Number(id)) {
+        if (`post-${allData[category].length - 1}` === id) {
           nextPost = null
         } else {
           nextPost = allData[category][i + 1] && {
-            id: allData[category][i + 1].id,
+            id: `post-${i + 1}`,
             title: allData[category][i + 1].title,
             category: category,
           }
@@ -28,7 +28,6 @@ export const findPrevNextPost = (allData, currentData) => {
         break
       }
     }
-
     return [prevPost, nextPost]
   } else {
     return [null, null]

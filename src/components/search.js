@@ -18,7 +18,7 @@ const Search = ({ input, dataTitle }) => {
               key={item.id}
               id={item.id}
               topic={item.topic}
-              title={item.title.rendered}
+              title={item.title}
               index={index}
             />
           ))}

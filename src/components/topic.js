@@ -18,13 +18,19 @@ const Topic = ({ category, topics, curCategory, curPost }) => {
       </h4>
       {open && (
         <ul>
-          {topics.map(({ id, title }) => (
-            <li key={id}>
-              {id === Number(curPost) && <span />}
+          {topics.map(({ title, date }, index) => (
+            <li key={String(date)}>
+              {`${category}/post-${index}` === `${curCategory}/${curPost}` && (
+                <span />
+              )}
               <Link
-                className={`${id === Number(curPost) ? `current-post` : ''}`}
-                to={`/${category}/${id}`}
-                dangerouslySetInnerHTML={{ __html: sliceCat(title.rendered) }}
+                className={`${
+                  `${category}/post-${index}` === `${curCategory}/${curPost}`
+                    ? `current-post`
+                    : ''
+                }`}
+                to={`/${category}/post-${index}`}
+                dangerouslySetInnerHTML={{ __html: sliceCat(title) }}
               />
             </li>
           ))}

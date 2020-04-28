@@ -1,16 +1,16 @@
 export const searchMatch = (allData, term) => {
   return Object.keys(allData)
     .map(key =>
-      allData[key].map(item => {
+      allData[key].map((item, index) => {
         if (
-          String(item.title.rendered)
+          String(item.title)
             .toLowerCase()
             .includes(term)
         ) {
           return {
             title: item.title,
             topic: key,
-            id: item.id,
+            id: index,
           }
         }
         return 0

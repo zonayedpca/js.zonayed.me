@@ -108,18 +108,20 @@ exports.createPages = ({ actions }) => {
           },
           component: topicPageTemplate,
         })
-        // res.data[topic].map((item, index) => {
-        //   const post = `post-${index}`
-        //   createPage({
-        //     path: `/${topic}/${post}`,
-        //     context: {
-        //       id: index,
-        //       data: item,
-        //       allData: data,
-        //     },
-        //     component: postPageTemplate,
-        //   })
-        // })
+        console.log('Hello World')
+        console.log(res.data[topic])
+        res.data[topic].map((item, index) => {
+          const post = `post-${index}`
+          createPage({
+            path: `/${topic}/${post}`,
+            context: {
+              id: index,
+              data: item,
+              allData: res.data,
+            },
+            component: postPageTemplate,
+          })
+        })
       })
     })
     .catch(err => {
