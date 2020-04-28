@@ -25,8 +25,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#f0db4f`,
         theme_color: `#323330`,
-        display: `minimal-ui`,
-        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+        display: `fullscreen`,
+        icon: `src/assets/images/icon.png`,
       },
     },
     {
@@ -49,5 +49,6 @@ module.exports = {
         sitemap: `${siteUrl}/sitemap.xml`,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }

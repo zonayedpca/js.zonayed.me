@@ -9,7 +9,7 @@
     "gatsby-image": "^2.2.17",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-nprogress": "^2.1.6",
-    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-offline": "^3.2.0",
     "gatsby-plugin-react-helmet": "^3.1.6",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.20",
