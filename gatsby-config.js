@@ -1,3 +1,5 @@
+const siteUrl = `https://js.zonayed.me`
+
 module.exports = {
   siteMetadata: {
     title: `হাতেকলমে জাভাস্ক্রিপ্ট`,
@@ -38,6 +40,13 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: `${siteUrl}`,
+        sitemap: `${siteUrl}/sitemap.xml`,
       },
     },
   ],
