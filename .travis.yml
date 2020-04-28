@@ -9,7 +9,7 @@ script:
   - npm run build
 deploy:
   provider: pages
-  skip_cleanup: true
+  cleanup: true
   github_token: $github_token
   local_dir: public
   target-branch: gh-pages
