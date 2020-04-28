@@ -100,7 +100,6 @@ exports.createPages = ({ actions }) => {
         component: homePageTemplate,
       })
       Object.keys(res.dataTitle).map(topic => {
-        console.log(topic)
         createPage({
           path: `/${topic}`,
           context: {
@@ -108,8 +107,6 @@ exports.createPages = ({ actions }) => {
           },
           component: topicPageTemplate,
         })
-        console.log('Hello World')
-        console.log(res.data[topic])
         res.data[topic].map((item, index) => {
           const post = `post-${index}`
           createPage({
