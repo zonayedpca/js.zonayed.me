@@ -5,6 +5,7 @@ module.exports = {
     title: `হাতেকলমে জাভাস্ক্রিপ্ট`,
     description: `সম্পূর্ণ বাংলায় জাভাস্ক্রিপ্ট শিখুন`,
     author: `@zonayedpca`,
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
