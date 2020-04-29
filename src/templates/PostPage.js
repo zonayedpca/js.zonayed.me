@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Post from '../components/post'
 import Catalog from '../components/catalog'
-import CodeEditor from '../components/codeeditor'
+import PlayGround from '../components/playground'
 
 import { handleLastRead, logInstruction } from '../utils'
 
@@ -30,7 +30,7 @@ const PostPage = ({ path, pageContext: { id, data, allData } }) => {
           content={data.content}
         />
         <Catalog path={path} topics={allData} />
-        <CodeEditor />
+        <PlayGround />
       </div>
     </Layout>
   )

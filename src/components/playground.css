@@ -1,0 +1,59 @@
+.playground {
+  position: fixed;
+  padding: 5px;
+  bottom: 25px;
+  left: 25px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  background-color: #f0db4f;
+  border: solid 3px #323330;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.floating-editor {
+  position: fixed;
+  left: 85px;
+  bottom: 25px;
+  height: 400px;
+  width: 320px;
+  background-color: #f0db4f;
+  border: solid 3px #323330;
+  z-index: 10;
+}
+
+.floating-editor .msg-warning {
+  font-size: 12px;
+  font-weight: 900;
+  color: #f44336;
+  margin-top: 5px;
+}
+
+.version-tag {
+  font-size: 11px;
+  font-weight: 900;
+  position: fixed;
+  bottom: 65px;
+  left: 55px;
+}
+
+.code-editor-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .floating-editor {
+    height: 256px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .floating-editor {
+    left: 25px;
+  }
+}
