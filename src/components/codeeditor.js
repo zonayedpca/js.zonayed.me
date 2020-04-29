@@ -25,9 +25,11 @@ const CodeEditor = () => {
   const [code, setCode] = useState('')
   const [output, setOutput] = useState(null)
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyboardShorcut)
+    if (typeof window !== 'undefined')
+      window.addEventListener('keydown', handleKeyboardShorcut)
     return () => {
-      window.removeEventListener('keydown', handleKeyboardShorcut)
+      if (typeof window !== 'undefined')
+        window.removeEventListener('keydown', handleKeyboardShorcut)
     }
   })
   const handleKeyboardShorcut = e => {
