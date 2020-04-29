@@ -16,7 +16,7 @@ const PlayGround = () => {
         <div className="playground" onClick={() => setVisibility(!visibility)}>
           <img alt="try coding here" src={playIcon} />
         </div>
-        {visibility && (
+        {visibility && typeof window !== 'undefined' && (
           <>
             <div className="floating-editor">
               <CodeEditor />

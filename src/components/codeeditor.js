@@ -91,9 +91,6 @@ const CodeEditor = () => {
     setOutput(output)
     console.log = console.oldLog
   }
-  if (typeof window === 'undefined') {
-    return null
-  }
   return (
     <div className="code-editor">
       <div>
