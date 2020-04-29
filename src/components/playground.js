@@ -4,15 +4,24 @@ import playIcon from '../assets/images/play.svg'
 
 import './playground.css'
 
-const CodeEditor = React.lazy(() => {
-  if (typeof window !== 'undefined') {
-    return import('./codeeditor')
-  }
-  return null
-})
+let codeEditor = null
+
+if (typeof window !== 'undefined') {
+  codeEditor = require('./codeeditor')
+}
 
 const PlayGround = () => {
+  let CodeEditor = null
   const [visibility, setVisibility] = useState(false)
+  if (codeEditor) {
+    CodeEditor = codeEditor.default
+  }
+  const renderCodeEditor = () => {
+    if (CodeEditor) {
+      return <CodeEditor />
+    }
+    return <p>Not in client-side</p>
+  }
   return (
     <>
       <div>
@@ -22,18 +31,16 @@ const PlayGround = () => {
         <div className="playground" onClick={() => setVisibility(!visibility)}>
           <img alt="try coding here" src={playIcon} />
         </div>
-        <React.Suspense fallback={() => <p>Loading</p>}>
-          {visibility && typeof window !== 'undefined' && (
-            <>
-              <div className="floating-editor">
-                <CodeEditor />
-                <p className="msg-warning">
-                  সঠিক ফল পেতে ব্রাউজারের কন্সোল ব্যবহার করুন
-                </p>
-              </div>
-            </>
-          )}
-        </React.Suspense>
+        {visibility && typeof window !== 'undefined' && (
+          <>
+            <div className="floating-editor">
+              {renderCodeEditor()}
+              <p className="msg-warning">
+                সঠিক ফল পেতে ব্রাউজারের কন্সোল ব্যবহার করুন
+              </p>
+            </div>
+          </>
+        )}
       </div>
       {visibility && (
         <div
