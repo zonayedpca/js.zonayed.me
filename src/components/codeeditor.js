@@ -4,6 +4,9 @@ import AceEditor from 'react-ace'
 import 'ace-builds/webpack-resolver'
 import 'ace-builds/src-noconflict/mode-javascript'
 import 'ace-builds/src-noconflict/theme-solarized_dark'
+import 'brace/ext/language_tools'
+import 'brace/ext/beautify'
+import 'brace/ext/emmet'
 
 import './codeeditor.css'
 

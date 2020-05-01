@@ -31,9 +31,12 @@ const PlayGround = () => {
         <div className="playground" onClick={() => setVisibility(!visibility)}>
           <img alt="try coding here" src={playIcon} />
         </div>
-        {visibility && typeof window !== 'undefined' && (
+        {typeof window !== 'undefined' && (
           <>
-            <div className="floating-editor">
+            <div
+              style={{ display: visibility ? 'block' : 'none' }}
+              className="floating-editor"
+            >
               {renderCodeEditor()}
               <p className="msg-warning">
                 সঠিক ফল পেতে ব্রাউজারের কন্সোল ব্যবহার করুন
