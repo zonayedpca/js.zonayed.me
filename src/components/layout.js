@@ -13,6 +13,7 @@ import Intro from './intro'
 import './layout.css'
 import Footer from './footer'
 import Main from './main'
+import Notice from './notice'
 
 const Layout = ({ children, home, dataTitle }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const Layout = ({ children, home, dataTitle }) => {
 
   return (
     <>
+      <Notice />
       <Intro
         home={home}
         dataTitle={dataTitle}
