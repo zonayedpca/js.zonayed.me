@@ -29,6 +29,12 @@ const Category = ({ topic, data }) => {
             topic={topic}
           />
         ))}
+        {topic === 'algods' && (
+          <Card
+            link="https://www.youtube.com/playlist?list=PLUdBKxH65BreTXN8fVhJe2LokGFiO8szx"
+            title="...ভিডিও সিরিজ"
+          />
+        )}
       </ul>
     </div>
   )

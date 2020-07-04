@@ -61,6 +61,15 @@ const Footer = () => {
                 আমার ব্লগ
               </a>
             </li>
+            <li>
+              <a
+                target="__blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/CodeWithZonayed"
+              >
+                আমি ইউটিউবে
+              </a>
+            </li>
           </ul>
         </div>
         <div className="child">
@@ -110,14 +119,15 @@ const Footer = () => {
           <img src={logo} alt="হাতেকলমে জাভাস্ক্রিপ্ট" />
         </div>
         <p>
-          <span>❤</span> এর সাথে ডেভেলপ করেছে{' '}
+          <span>©</span> স্বত্ব{' '}
           <a
             target="__blank"
             rel="noopener noreferrer"
-            href="https://zonayed.me"
+            href="https://codewith.zonayed.me"
           >
-            জুনায়েদ আহমেদ
-          </a>
+            কোড উইদ জুনায়েদ
+          </a>{' '}
+          ২০২০
         </p>
       </div>
     </footer>
