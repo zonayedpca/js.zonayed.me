@@ -6,10 +6,15 @@ const YT_SUBSCRIPTION_STATUS = 'YT_SUBSCRIPTION_STATUS'
 
 const Notice = () => {
   const [isShown, setIsShown] = useState(true)
-  const isYTShown = window.localStorage.getItem(YT_SUBSCRIPTION_STATUS)
+  const isYTShown =
+    typeof window !== `undefined`
+      ? window.localStorage.getItem(YT_SUBSCRIPTION_STATUS)
+      : false
   const handleClick = type => {
-    window.localStorage.setItem(YT_SUBSCRIPTION_STATUS, 'true')
-    setIsShown(false)
+    if (typeof window !== undefined) {
+      window.localStorage.setItem(YT_SUBSCRIPTION_STATUS, 'true')
+      setIsShown(false)
+    }
   }
   if (isYTShown === 'true' || !isShown) {
     return null
