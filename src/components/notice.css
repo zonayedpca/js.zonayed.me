@@ -1,0 +1,54 @@
+.notice-area {
+  display: flex;
+  background-color: #323330;
+  padding: 15px 100px;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notice-area a {
+  background-color: #f0db4f;
+  padding: 3px 10px;
+  color: #323330;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+.notice-area button {
+  margin-left: 15px;
+  background: #fff;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  line-height: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .notice-area {
+    padding: 15px 50px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .notice-area {
+    padding: 15px 25px;
+  }
+}
+
+@media only screen and (max-width: 661px) {
+  .notice-area {
+    text-align: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .notice-area > * {
+    flex: 1 1 100%;
+  }
+}
