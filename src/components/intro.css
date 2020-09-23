@@ -137,13 +137,24 @@
     height: auto;
   }
 
+  .intro .intro-area {
+    flex-direction: column;
+  }
+
   .intro .intro-area .intro-main {
     flex: 1 1 100%;
     text-align: center;
   }
 
   .intro .intro-area .intro-book {
-    display: none;
+    padding: 60px 0;
+  }
+  .intro .intro-area .intro-book img {
+    height: 180px;
+  }
+
+  .intro .intro-book::after {
+    bottom: 0;
   }
 
   .intro .intro-area .intro-main .intro-text h2 {
@@ -191,4 +202,11 @@
   padding: 4px 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+  .book-info {
+    width: calc(100% - 50px);
+    right: 25px;
+  }
 }
