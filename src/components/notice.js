@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './notice.css'
 
-const YT_SUBSCRIPTION_STATUS = 'YT_SUBSCRIPTION_STATUS'
+const YT_SUBSCRIPTION_STATUS = 'COURSE_SUGGESTIONS'
 
 const Notice = () => {
   const [isShown, setIsShown] = useState(true)
@@ -22,16 +22,16 @@ const Notice = () => {
   return (
     <div className="notice-area">
       <p>
-        <strong>কোড উইদ জুনায়েদ</strong> এখন ইউটিউবে
+        <strong>কোড উইদ জুনায়েদ</strong> থেকে রিঅ্যাক্ট জেএস এর উপর কোর্স আনার প্ল্যান চলছে
       </p>
       <div>
         <a
-          href="https://www.youtube.com/CodeWithZonayed?sub_confirmation=1"
+          href="https://forms.gle/GbVVq8DYpwHEegVh8"
           target="__blank"
           rel="noopener noreferrer"
           hef=""
         >
-          এখনই সাবস্ক্রাইব করুন
+          আপনার মতামত দিন
         </a>
         <button onClick={handleClick}>x</button>
       </div>
