@@ -9,10 +9,9 @@ import error from '../assets/images/error.svg'
 import './404.css'
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="খুঁজে পাওয়া যায়নি" />
+  <div>
     redirecting to <a href="https://with.zonayed.me">with.zonayed.me</a>
-  </Layout>
+  </div>
 )
 
 export default NotFoundPage
