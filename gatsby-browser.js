@@ -18,6 +18,8 @@ exports.onPreRouteUpdate = ({ location }) => {
   if (paths[pathname]) {
     console.log('reidrecting to...', paths[pathname])
     window.location.replace(paths[pathname])
+  } else {
+    window.location.replace(paths['/'])
   }
   NProgress.start()
 }
