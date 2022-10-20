@@ -18,18 +18,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `হাতেকলমে জাভাস্ক্রিপ্ট`,
-        short_name: `জাভাস্ক্রিপ্ট`,
-        start_url: `/`,
-        background_color: `#f0db4f`,
-        theme_color: `#323330`,
-        display: `fullscreen`,
-        icon: `src/assets/images/icon.png`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `হাতেকলমে জাভাস্ক্রিপ্ট`,
+    //     short_name: `জাভাস্ক্রিপ্ট`,
+    //     start_url: `/`,
+    //     background_color: `#f0db4f`,
+    //     theme_color: `#323330`,
+    //     display: `fullscreen`,
+    //     icon: `src/assets/images/icon.png`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -43,13 +43,14 @@ module.exports = {
         output: `/sitemap.xml`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: `${siteUrl}`,
-        sitemap: `${siteUrl}/sitemap.xml`,
-      },
-    },
-    `gatsby-plugin-offline`,
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     host: `${siteUrl}`,
+    //     sitemap: `${siteUrl}/sitemap.xml`,
+    //   },
+    // },
+    // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }
