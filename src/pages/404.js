@@ -9,8 +9,16 @@ import error from '../assets/images/error.svg'
 import './404.css'
 
 const NotFoundPage = () => (
-  <div>
-    redirecting to{' '}
+  <div
+    style={{
+      display: 'flex',
+      height: '100vh',
+      width: '100vw',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    redirecting to:{' '}
     <a href="https://with.zonayed.me/js">
       JavaScript Series by Code with Zonayed
     </a>
